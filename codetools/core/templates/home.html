@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="px-4 py-5 my-5 text-center">
+
+  <img class="d-block mx-auto mb-4" src="{% static 'code.svg' %}" alt="" width="72" height="57">
+  <h1 class="display-5 fw-bold">Bem Vindo</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">
+        Este site tem como ideia principal servir como ferramenta para todos os tipos de desenvolvedores.
+    </p>
+    <p class="lead mb-4">
+        Aos poucos irei desenvolvendo ferramentas capazes de nos ajudar no dia a dia de desenvolvimento
+    </p>
+    <p class="lead mb-4">
+        Release: {{app_version}}<strong>
+    </p>
+  </div>
+</div>
+</div>
+{% endblock %}
+
+
+

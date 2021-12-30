@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'codetools.core',
+    'codetools.lorem',
+    'codetools.knowledge',
+    'codetools.help',
 ]
 
 MIDDLEWARE = [

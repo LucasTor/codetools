@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="px-4 py-5 my-5">
+    <div class="container">
+        <p class="text-muted text-center"> 
+            Cadastro de pessoa fake para utilizar, ainda tem algumas informações como cor aleatoria ou placa de veiculo pronta pra ser copiado. <br> Basta clicar
+        </p>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title copy ">{{name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted copy">{{job}}</h6>
+                <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item copy">{{address}}</li>
+                    <li class="list-group-item">
+                        <span class="copy">
+                            {{uf.1}}
+                        </span>
+                        <span class="copy">
+                            {{uf.0}}
+                        </span>
+                    </li>
+                    <li class="list-group-item copy">{{cpf}}</li>
+                    <li class="list-group-item">
+                        <span class="copy">
+                            {{placa}}
+                        </span>
+                        <span class="badge" style="background-color: {{color}}">
+                            <span class="badge bg-dark copy">
+                                {{color}}
+                            </span>
+                        </span>
+                    </li>
+                </ul>
+                {% for i in ipsum %}
+                <p class="card-text px-2 copy">
+                    {{ i }}
+                </p>
+                <br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    $('.copy').on('click', function (event) {
+        navigator.clipboard.writeText(event.target.innerHTML).then(function () {
+            let timerInterval;
+            Swal.fire({
+                title: 'Copiado!',
+                timer: 500,
+                timerProgressBar: true,
+                willClose: () => {
+                    clearInterval(timerInterval)
+                }
+            }).then((result) => {
+                /* Read more about handling dismissals below */
+                if (result.dismiss === Swal.DismissReason.timer) {
+                    console.log('I was closed by the timer')
+                }
+            })
+        }, function () {
+            alert('Sem suport a esse recurso!')
+        });
+
+    })
+</script>
+{% endblock %}

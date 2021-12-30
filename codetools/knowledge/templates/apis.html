@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="px-4 py-5 my-5">
+    <div class="container">
+        <div class="list-group">
+            <a href="https://pokeapi.co/" class="list-group-item list-group-item-action" target="_blank" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Poke Api</h5>
+                </div>
+                <p class="mb-1">Hora de criar sua propria pokeagenda </p>
+                <small>Contém cdn para retornar de sprites também</small>
+            </a>
+            <a href="https://developer.marvel.com" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Marvel Api</h5>
+                </div>
+                <p class="mb-1">Que tal consultar uma das maiores bases de herois e ter disponivel algumas imagens pra usar ?</p>
+                <small class="text-muted">Exige cadastro para algumas infos.</small>
+            </a>
+            <a href="https://api.chucknorris.io/" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Chuck Norris Api</h5>
+                </div>
+                <p class="mb-1">Que tal dar mais poder ao seu projeto com fatos sobre o Chuck Norris</p>
+                <small class="text-muted">Somente em inglês</small>
+            </a>
+            <a href="https://rickandmortyapi.com" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Rick and Morty Api</h5>
+                </div>
+                <p class="mb-1">Que tal se perder em todo o universo dessa serie ?</p>
+                <small class="text-muted">Disponivel em graphql/rest</small>
+            </a>
+            <a href="https://agify.io/" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Agify Api</h5>
+                </div>
+                <p class="mb-1">Que tal tentar adivinhar a idade de alguem pelo nome ?</p>
+                <small class="text-muted">Tem outras nesse site, para descobrir o sexo ou a nascionalidade</small>
+            </a>
+            <a href="https://deckofcardsapi.com/" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Deck of cards Api</h5>
+                </div>
+                <p class="mb-1">Que tal montar teu jogo de cartas sem se preucupar em criar um algoritimo de embaralhar cartas ?</p>
+                <small class="text-muted">Da uma olhada nessa api de baralhos!</small>
+            </a>
+            <a href="https://www.boredapi.com/" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Bored Api</h5>
+                </div>
+                <p class="mb-1">Sem nada pra fazer ? que tal achar algo aleatorio para fazer e tentar se inspirar!</p>
+                <small class="text-muted">Somente em inglês</small>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

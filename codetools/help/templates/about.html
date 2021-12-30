@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<main class="container">
+    <div class="d-flex align-items-center p-3 my-3 bg-info rounded shadow-sm">
+        <img class="me-3" src="{% static 'img/code.svg' %}" alt="" width="72" height="57">
+        <div class="lh-1">
+            <h2 class="mb-0 lh-1">Code Tools</h2>
+            <small>Release {{app_version}}</small>
+        </div>
+    </div>
+  
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+      <h6 class="border-bottom pb-2 mb-0">Links Uteis Sobre o Projeto</h6>
+      <div class="d-flex text-muted pt-3">
+        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+  
+        <p class="pb-3 mb-0 small lh-sm border-bottom" style="width: 100%;">
+            <a href="https://www.djangoproject.com/">
+                <strong class="d-block text-gray-dark">Django</strong>
+            </a>
+          Tecnologia de back-end
+        </p>
+      </div>
+      <div class="d-flex text-muted pt-3">
+        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+          <p class="pb-3 mb-0 small lh-sm border-bottom" style="width: 100%;">
+            <a href="https://getbootstrap.com/">
+                <strong class="d-block text-gray-dark">Bootstrap</strong>
+            </a>
+            Tecnologia de front-end
+        </p>
+      </div>
+      <div class="d-flex text-muted pt-3">
+        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+  
+        <p class="pb-3 mb-0 small lh-sm border-bottom" style="width: 100%;">
+            <a href="https://github.com/Perceu/codetools">
+                <strong class="d-block text-gray-dark">Github</strong>
+            </a>
+            Repositorio do projeto!
+        </p>
+      </div>
+    </div>
+  
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+      <h6 class="border-bottom pb-2 mb-0">Apoiadores</h6>
+      <div class="d-flex text-muted pt-3">
+        <img src="https://s.gravatar.com/avatar/8549bffc38f406e7041ad3675ce067bd?s=80" alt="gravatar" width="32" height="32" class="bd-placeholder-img flex-shrink-0 me-2 rounded">
+        <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+          <div class="d-flex justify-content-between">
+            <strong class="text-gray-dark">Perceu Gonçalves Bertoletti</strong>
+            <a href="http://perceu.github.io">Ver Mais</a>
+          </div>
+          <span class="badge bg-success">Maintainer</span>
+          <span class="badge bg-primary">Developer</span>
+        </div>
+      </div>
+  </main>
+{% endblock %}

@@ -34,8 +34,12 @@ def lorem_pixel(request):
 
     img = Image.new('RGB', (width, height), color = color)
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("Ubuntu-R.ttf", 30)
-    font_2 = ImageFont.truetype("Ubuntu-R.ttf", 18)
+
+    font_path = f"{settings.BASE_DIR}/contrib/roboto.ttf"
+    
+    font = ImageFont.truetype(font_path, 30)
+    font_2 = ImageFont.truetype(font_path, 18)
+    
     mark = f"Codetools {settings.APP_VERSION}"
     
     draw.text((20, 20),mark,(255,255,255), font=font)

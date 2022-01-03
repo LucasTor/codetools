@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="px-4 py-5 my-5">
+    <div class="container">
+
+        <p class="text-muted text-center"> 
+            Sempre precisamos as vezes mokar uma imagem para desenvolver, as vezes precisamos de um link somente ou uma imagem numa resolução especifica, ou até um base64 somente para conseguirmos preencher aquele espaço.
+            Esse é o intuito de apis como essa Lorem Pixel 
+        </p>
+
+        <div class="card">
+            <div class="card-body">
+                <form action="{% url 'lorem:pixel' %}">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                              <input type="number" autofocus class="form-control" name="height" max="1280" value="300" placeholder="altura" id="height">
+                              <div class="form-text">Valor maximo 1280</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                              <input type="number" name="width" max="720" placeholder="largura" value="300" id="width" class="form-control">
+                              <div class="form-text">Valor maximo 720</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                      <input type="color" name="color" class="form-control form-control-color">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="mb-3 form-check">
+                              <input type="checkbox" name="base64" class="form-check-input" id="exampleCheck1">
+                              <label class="form-check-label" for="exampleCheck1">base64</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Gerar</button>
+                  </form>
+            </div>
+        </div>
+        <small class="text-muted">
+            Consulte a nossa base de conhecimento para conhecer outras ferramentas desse tipo! Somos limitados pela nossa infra, mas queremos que com o tempo isso possa ser melhor!
+        </small>
+    </div>
+</div>
+{% endblock %}

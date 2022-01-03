@@ -1,4 +1,4 @@
-DEBUG=False
+DEBUG=True
 SECRET_KEY=ARANDOMSECRETKEY
-DATABASE_URL=mysql://myuser:mypassword@myhost/mydatabase
-ALLOWED_HOSTS=host,ip,cname
+#DATABASE_URL=mysql://myuser:mypassword@myhost/mydatabase
+#ALLOWED_HOSTS=host,ip,cname

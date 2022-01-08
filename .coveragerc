@@ -1,0 +1,6 @@
+[run]
+branch = True
+omit =
+    manage.py
+    codetools/asgi.py
+    codetools/wsgi.py

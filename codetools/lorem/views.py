@@ -1,6 +1,7 @@
 import io
+import json
 from django.http.response import JsonResponse
-from django.shortcuts import render, HttpResponse 
+from django.shortcuts import render, HttpResponse, resolve_url
 from django.conf import settings
 from PIL import Image, ImageDraw, ImageFont
 from faker import Faker
@@ -12,6 +13,9 @@ def lorem_ipsum(request):
     for i in range(2):
         ipsum.append(fake.paragraph(nb_sentences=10))
 
+    with open(f"{settings.BASE_DIR}/codetools/lorem/json/lorem_ipsum.json") as db_json:
+        links_uteis = json.loads(db_json.read())
+
     context = {
         "name": fake.name(),
         "job": fake.job(),
@@ -21,7 +25,9 @@ def lorem_ipsum(request):
         "cpf": fake.cpf(),
         "color": fake.hex_color(),
         "ipsum": ipsum,
+        "links_uteis": links_uteis,
     }
+
     return render(request, "lorem-ipsum.html", context=context)
 
 def lorem_pixel(request):
@@ -60,4 +66,12 @@ def lorem_pixel(request):
     return response
 
 def lorem_pixel_index(request):
-    return render(request, "lorem-pixel.html")
+
+    with open(f"{settings.BASE_DIR}/codetools/lorem/json/lorem_pixel.json") as db_json:
+        links_uteis = json.loads(db_json.read())
+
+    context = {
+        "links_uteis": links_uteis,
+    }
+    
+    return render(request, "lorem-pixel.html", context)

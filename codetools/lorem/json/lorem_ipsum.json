@@ -1,0 +1,12 @@
+[
+    {
+        "nome": "lorem ipsum",
+        "link": "https://www.lipsum.com/",
+        "descricao": "Site famoso para gerar lorem de diversos tamanhos"
+    },
+    {
+        "nome": "mussum ipsum",
+        "link": "https://mussumipsum.com/",
+        "descricao": "Site famoso para gerar lorem de diversos tamanhos, mas com as famosas frases do mussum"
+    }
+]

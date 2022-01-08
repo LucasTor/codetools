@@ -1,5 +1,8 @@
+
+[![codecov](https://codecov.io/gh/Perceu/codetools/branch/main/graph/badge.svg?token=BIRUYR3J7V)](https://codecov.io/gh/Perceu/codetools)
+
 # codetools
-Repositorio do site code tools
+Repositorio do site [codetools](https://codetools.com.br/)
 
 ## Utilizando o makefile
 
@@ -20,4 +23,3 @@ make run
 ```shell
 make migrate
 ```
-

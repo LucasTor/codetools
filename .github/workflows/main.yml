@@ -1,8 +1,10 @@
 name: Workflow for Codecov coverage
 on: [push, pull_request]
 jobs:
-  run:
+  coverage_job:
     runs-on: ubuntu-latest
+    env:
+      SECRET_KEY: key_for_converage_secret_psyyyyyy
     steps:
       - name: Checkout
         uses: actions/checkout@v2

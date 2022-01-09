@@ -5,6 +5,10 @@ from django.urls import reverse
 
 class TestHelp(TestCase):
    
-    def testStatusCode(self):
+    def testStatusCodeAbout(self):
         response = self.client.get(reverse('help:about'))
+        self.assertEquals(response.status_code, 200)
+
+    def testStatusCodeContrib(self):
+        response = self.client.get(reverse('help:contrib'))
         self.assertEquals(response.status_code, 200)
